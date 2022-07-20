@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">email</string>
+    <string name="insert_password">password</string>
+    <string name="new_user">Register</string>
+    <string name="old_user">Login</string>
+    <string name="long_discription">you can
+        \n
+        \n
+        choose
+        \nyour\n\n favorite \n\nshoe
+        \n here</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_message">Nice to see you here, this app will be support you to get an opportunity to find best shoe</string>
+    <string name="start">START</string>
+    <string name="body">If you want to know more about the Flower,\n contact will be pleased to assist and guide you in your application \n\n\n for the Shoes. \n\n\n\n\n\n\ you can read more about the requirements behind the Flower. You can also get assistanceDK-7400 Herning
+Environmental and consumer organizations all over
+Europe call on enterprises to opt for the shoes.
+Through member journals, websites and local activities,
+    \n\n    There are, however, good possibilities
+of obtaining a discount. Small and medium-sized
+enterprises get a 25 per cent discount on the application
+and turnover fees. EMAS registered or ISO 14001 certified
+enterprises that have declared to comply with product
+group criteria in their environmental policy get a 15
+per cent discount on the turnover fee. The minimum
+fee amounts to EURO500 and the maximum fee toEURO25,000
+organizations make an active effort
+        \n\nTel +45 97127022\n\n
+Fax +45 97123256\n\n
+E-mail amz@teko.dk\n\n</string>
+    <string name="guideline">guideline</string>
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
 </resources>

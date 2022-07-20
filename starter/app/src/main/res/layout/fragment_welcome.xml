@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".WelcomeFragment">
+
+<LinearLayout
+    android:id="@+id/parent_linear"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        style="@style/style_header_welcome" />
+
+    <TextView
+        android:id="@+id/textView_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:paddingStart="@dimen/_5sdp"
+        android:text="@string/welcome_message" />
+
+    <Button
+        android:id="@+id/go_to_Instruction"
+        android:layout_width="match_parent"
+        style="@style/button_login"
+        android:bottomRightRadius="10dp"
+        android:bottomLeftRadius="10dp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_15sdp"
+        android:text="@string/start"
+        android:layout_marginHorizontal="@dimen/_100sdp"
+        android:layout_marginVertical="@dimen/_100sdp"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
+    </FrameLayout>
+</layout>

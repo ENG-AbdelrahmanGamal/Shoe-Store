@@ -8,12 +8,51 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
+        <item name="windowActionBar">true</item>
         <item name="windowNoTitle">true</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextInputLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_25sdp</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+    </style>
+
+    <style name="button_login">
+        <item name="android:bottomRightRadius">10dp</item>
+        <item name="android:bottomLeftRadius">10dp</item>
+        <item name="android:topLeftRadius">10dp</item>
+        <item name="android:topRightRadius">10dp</item>
+        <item name="cornerRadius">7dip</item>
+        <item name="android:layout_margin">@dimen/_5sdp</item>
+        <item name="android:padding">@dimen/_5sdp</item>
+        <item name="android:background">#4CAF50</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="style_header_welcome">
+        <item name="android:padding">@dimen/_10sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/_50sdp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/_34sdp</item>
+    </style>
+
+    <style name="message_body">
+        <item name="tabStyle">@id/normal</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/_10sdp</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+    </style>
 
 </resources>

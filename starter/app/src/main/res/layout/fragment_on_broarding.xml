@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+<TextView
+    android:layout_marginTop="@dimen/_50sdp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:textSize="@dimen/_25ssp"
+    android:textColor="@color/colorAccent"
+    android:text="@string/guideline"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_300sdp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_200sdp"
+         android:text="@string/body"
+        style="@style/message_body" />
+
+</ScrollView>
+
+
+
+       <Button
+           android:id="@+id/go_to_shoe_list"
+           android:layout_width="match_parent"
+           style="@style/button_login"
+           android:bottomRightRadius="10dp"
+           android:bottomLeftRadius="10dp"
+           android:topLeftRadius="10dp"
+           android:topRightRadius="10dp"
+           android:padding="@dimen/_10sdp"
+           android:layout_margin="@dimen/_15sdp"
+           android:text="@string/start"
+           android:layout_marginHorizontal="@dimen/_100sdp"
+           android:layout_marginVertical="@dimen/_100sdp"
+           android:layout_height="wrap_content" />
+   </LinearLayout>
+</layout>
