@@ -1,4 +1,4 @@
-package com.udacity.shoestore.onBroarding
+package com.udacity.shoestore.uI
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,12 +7,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
-import com.smarteist.autoimageslider.SliderAnimations
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentOnBroardingBinding
-
-
 class OnBroardingFragment : Fragment() {
     private lateinit var binding:FragmentOnBroardingBinding
     override fun onCreateView(
@@ -27,7 +23,7 @@ class OnBroardingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 binding.goToShoeList.setOnClickListener{
-    Navigation.findNavController(view).navigate(R.id.action_onBroardingFragment_to_listFragment)
+    Navigation.findNavController(view).navigate(R.id.action_onBroardingFragment_to_listFragment2)
 
 }
     }

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
@@ -26,12 +27,12 @@ binding=DataBindingUtil.inflate(inflater,R.layout.fragment_login,container,false
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.buttonRegister.setOnClickListener{
-            Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_welcomeFragment);
+Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_welcomeFragment)
+
         }
         binding.buttonLogin.setOnClickListener{
-            Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_onBroardingFragment);
+            Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_listFragment);
         }
     }
 }

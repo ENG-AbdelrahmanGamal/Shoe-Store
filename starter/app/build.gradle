@@ -58,8 +58,16 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.10'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.6.1'
-    implementation 'com.github.smarteist:autoimageslider:1.4.0'
-    implementation 'com.github.smarteist:autoimageslider:1.4.0-appcompat'
     implementation("androidx.cardview:cardview:1.0.0")
+
+//
+//        // ViewModel
+//        implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0")
+//        // ViewModel utilities for Compose
+//        implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.0")
+//        // LiveData
+//        implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.0")
+//        // Lifecycles only (without ViewModel or LiveData)
+//        implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.0")
 
 }

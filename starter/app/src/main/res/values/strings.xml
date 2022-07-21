@@ -34,4 +34,14 @@ E-mail amz@teko.dk\n\n</string>
     <string name="guideline">guideline</string>
     <string name="about">About</string>
     <string name="logout">Logout</string>
+    <string name="cancel">Cancel</string>
+    <string name="insert_your_shoe_details">Insert your Shoe Details</string>
+    <string name="save">Save</string>
+    <string name="insert_name_of_shoe">insert name of shoe</string>
+    <string name="insert_name_of_company_it_is_have">insert name of Company it is have</string>
+    <string name="name">name</string>
+    <string name="Company">Company</string>
+    <string name="insert_size">Insert Size</string>
+    <string name="size">Size</string>
+    <string name="Description">Description</string>
 </resources>

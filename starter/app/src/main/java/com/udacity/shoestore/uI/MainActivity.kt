@@ -1,13 +1,11 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.uI
 
 
 import android.os.Bundle
-import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.udacity.shoestore.R
 import kotlinx.android.synthetic.main.activity_main.*
 import timber.log.Timber
 
@@ -20,11 +18,10 @@ class MainActivity : AppCompatActivity() {
         Timber.plant(Timber.DebugTree())
     setSupportActionBar(toolbar)
 
-        val navController = this.findNavController(R.id.fragment_container )
+
+        val navController = this.findNavController(R.id.fragment_container)
         NavigationUI.setupActionBarWithNavController(this,navController)
     }
-    //
-
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.fragment_container)

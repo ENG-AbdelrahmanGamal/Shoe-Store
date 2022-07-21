@@ -18,14 +18,12 @@
         android:layout_height="wrap_content"
         android:background="#6666"
         tools:context=".shoes.ListFragment">
-
         <!-- TODO: Update blank fragment layout -->
-
         <LinearLayout
             android:id="@+id/linear_Container_parent"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/_200sdp">
 
 
         </LinearLayout>
