@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.udacity.shoestore.WelcomeFragment"
+        android:name="com.udacity.shoestore.uI.WelcomeFragment"
         android:label="WelcomeFragment" >
         <action
             android:id="@+id/action_welcomeFragment_to_onBroardingFragment"
@@ -54,7 +54,7 @@
     </fragment>
     <fragment
         android:id="@+id/shoeDetailFragment"
-        android:name="com.udacity.shoestore.shoeDetailFragment"
+        android:name="com.udacity.shoestore.shoes.ShoeDetailFragment"
         android:label="shoeDetailFragment" >
         <action
             android:id="@+id/action_ShoeDetailFragment_to_listFragment"

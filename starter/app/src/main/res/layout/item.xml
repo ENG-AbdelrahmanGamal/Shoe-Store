@@ -10,103 +10,96 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="?actionBarSize"
         android:id="@+id/constraint_item_parent"
-        android:background="#0000ff"
+        android:background="#FF518B"
+        android:padding="@dimen/_5sdp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/_3sdp"
+            android:backgroundTint="#BEE8FB"
             app:cardCornerRadius="@dimen/_10sdp"
-            android:backgroundTint="#ffffff"
-            tools:layout_editor_absoluteX="4dp">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/imv_item_shoe"
-                android:layout_width="@dimen/_200sdp"
-                android:layout_height="@dimen/_200sdp"
-                android:layout_gravity="center_horizontal"
-               android:scaleType="fitXY"
-                android:src="@drawable/boots"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                <ImageView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/imv_item_shoe"
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="@dimen/_75sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/boots"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+                <TextView
+                    android:paddingStart="@dimen/_5sdp"
 
-                />
+                    android:id="@+id/tv_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/sniker"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imv_item_shoe"
+                    tools:hint="name"
+                    />
+                <TextView
+                    android:paddingStart="@dimen/_5sdp"
 
-            <TextView
-                android:layout_marginTop="@dimen/_24sdp"
-                android:id="@+id/tv_item_name"
-                app:layout_constraintTop_toBottomOf="@+id/imv_item_shoe"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@={shoe.name}"
-                tools:hint="name"
-                android:textSize="@dimen/_24sdp"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
+                    android:id="@+id/tv_item_Company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Active"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
+                    tools:hint="name"
+                    />
+                <TextView
+                    android:paddingStart="@dimen/_5sdp"
 
-                />
-    <TextView
-        android:layout_marginTop="@dimen/_24sdp"
-        android:id="@+id/tv_item_Company"
-        app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@={shoe.Company}"
-        tools:hint="name"
-        android:textSize="@dimen/_24sdp"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
+                    android:id="@+id/tv_item_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="41"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_item_Company"
+                    tools:hint="name"
+                    />
+                <TextView
+                    android:paddingStart="@dimen/_5sdp"
 
-        />
-    <TextView
-        android:layout_marginTop="@dimen/_24sdp"
-        android:id="@+id/tv_item_size"
-        app:layout_constraintTop_toBottomOf="@+id/tv_item_Company"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        tools:hint="name"
-        android:textSize="@dimen/_24sdp"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-
-        />
-    <TextView
-        android:layout_marginTop="@dimen/_24sdp"
-        android:id="@+id/tv_item_Description"
-        app:layout_constraintTop_toBottomOf="@+id/tv_item_size"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@={shoe.description}"
-        tools:hint="name"
-        android:textSize="@dimen/_24sdp"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-
-        />
-</androidx.constraintlayout.widget.ConstraintLayout>
-
+                    android:id="@+id/tv_item_Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Running sniker"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_item_size"
+                    tools:hint="name"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
