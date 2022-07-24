@@ -5,8 +5,9 @@
 
     <data>
 <variable
-    name="shoe"
-    type="com.udacity.shoestore.models.Shoe" />
+    name="viewModel"
+    type="com.udacity.shoestore.uI.ShoesViewModel"
+    />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +17,8 @@
         android:padding="@dimen/_5sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
+<!--here i use card view because It's great to use especially for displaying an items
+ like this   easy to display your card with  amazing attribute CornerRadius to make your view with curve -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
@@ -27,7 +29,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
+<!--here i used a constraint to make a image center of parent and view start with the parent -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -46,12 +48,11 @@
                     />
                 <TextView
                     android:paddingStart="@dimen/_5sdp"
-
                     android:id="@+id/tv_item_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/sniker"
+                    android:text="@{()->viewModel._shoe.get().name}"
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imv_item_shoe"
@@ -64,21 +65,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Active"
+                    android:text="@{viewModel._shoe.get().company}"
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
                     tools:hint="name"
                     />
+<!--         android:text="@{viewModel._shoe.get().size?:0.0}"
+ -->
                 <TextView
                     android:paddingStart="@dimen/_5sdp"
-
                     android:id="@+id/tv_item_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
-                    android:text="41"
+                    android:text="@{String.valueOf(viewModel._shoe.get().size)}"
                     android:textStyle="bold"
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -87,13 +89,12 @@
                     />
                 <TextView
                     android:paddingStart="@dimen/_5sdp"
-
                     android:id="@+id/tv_item_Description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
-                    android:text="Running sniker"
+                    android:text="@{viewModel._shoe.get().description}"
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_item_size"

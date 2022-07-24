@@ -5,7 +5,9 @@
     <data>
 
     </data>
-
+<!--  I Use the linear to Root the view until support me present the complex Design
+below by vertical  any way the constraint  layout easy for control distinction of the view  use tag constraint
+    like layout_constraintEnd_toEndOf ant pass id or parent -->
     <LinearLayout
         android:id="@+id/constraint"
         android:layout_width="match_parent"
@@ -57,7 +59,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <EditText
                         android:id="@+id/et_name"
                         android:layout_width="204dp"
                         android:layout_height="wrap_content"
@@ -97,7 +99,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <EditText
                         android:id="@+id/et_company"
                         android:layout_width="204dp"
                         android:layout_height="wrap_content"
@@ -130,10 +132,9 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <EditText
                         android:id="@+id/et_size"
                         android:layout_width="204dp"
-
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5ssp"
                         android:hint="@string/insert_size"
@@ -148,7 +149,6 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraint_Description"
                     android:layout_marginTop="@dimen/_10sdp"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_10sdp">
@@ -165,7 +165,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <EditText
                         android:id="@+id/et_Description"
                         android:layout_width="204dp"
                         android:layout_height="wrap_content"
@@ -185,24 +185,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <!--        <com.google.android.material.textfield.TextInputEditText-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/et_name"-->
-        <!--            android:layout_margin="@dimen/_25ssp"-->
-        <!--            android:id="@+id/et_company"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:hint="@string/insert_name_of_company_it_is_have"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:inputType="text" />-->
 
-
-        <!--        <com.google.android.material.textfield.TextInputEditText-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/et_company"-->
-        <!--            android:layout_margin="@dimen/_25ssp"-->
-        <!--            android:id="@+id/et_size"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:hint="@string/insert_name_of_company_it_is_have"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:inputType="number" />-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_buttons"

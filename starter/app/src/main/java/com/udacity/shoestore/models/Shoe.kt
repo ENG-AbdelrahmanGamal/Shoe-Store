@@ -7,4 +7,11 @@ import kotlinx.android.parcel.Parcelize
 data class Shoe(var name: String, var size: Double,
                 var company: String, var description: String,
                 val images: List<String> = mutableListOf())
-    : Parcelable
+   : Parcelable
+{
+
+
+    override fun toString(): String {
+        return "Shoe(name='$name', size=$size, company='$company', description='$description', images=$images)"
+    }
+}
