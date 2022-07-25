@@ -65,6 +65,7 @@
         <action
             android:id="@+id/action_ShoeDetailFragment_to_listFragment"
             app:destination="@id/listFragment"
+            app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>

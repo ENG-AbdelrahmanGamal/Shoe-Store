@@ -5,8 +5,8 @@
 
     <data>
 <variable
-    name="viewModel"
-    type="com.udacity.shoestore.uI.ShoesViewModel"
+    name="shoe"
+    type="com.udacity.shoestore.models.Shoe"
     />
     </data>
 
@@ -46,13 +46,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     />
+<!--                                    android:text="@{()->viewModel._shoe.toString()}"
+-->
                 <TextView
                     android:paddingStart="@dimen/_5sdp"
                     android:id="@+id/tv_item_name"
                     android:layout_width="wrap_content"
+                    android:text="@{shoe.name}"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@{()->viewModel._shoe.get().name}"
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imv_item_shoe"
@@ -60,12 +62,11 @@
                     />
                 <TextView
                     android:paddingStart="@dimen/_5sdp"
-
                     android:id="@+id/tv_item_Company"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@{viewModel._shoe.get().company}"
+                    android:text="@{shoe.company}"
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
@@ -80,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
-                    android:text="@{String.valueOf(viewModel._shoe.get().size)}"
+                    android:text="@{Double.toString(shoe.size)}"
                     android:textStyle="bold"
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
-                    android:text="@{viewModel._shoe.get().description}"
+                    android:text="@{shoe.description}"
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_item_size"

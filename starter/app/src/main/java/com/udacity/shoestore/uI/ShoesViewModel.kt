@@ -17,13 +17,14 @@ private const val TAG = "ShoesViewModel"
 class ShoesViewModel : ViewModel() {
     var _shoe =MutableLiveData<MutableList<Shoe>>()
     val list=ArrayList<Shoe>()
+    val itemSho=MutableLiveData<Shoe>()
 
     init {
       Log.i(TAG, ": ")
   }
 //var shoe : LiveData<List<Shoe>> =
 
-
+    val shoeCompany = MutableLiveData<String>()
 
 fun getShoe(shoe: Shoe)
 {
@@ -31,6 +32,14 @@ fun getShoe(shoe: Shoe)
     _shoe.value=list
 
 }
-fun add(): MutableList<Shoe>? = _shoe.value
+fun getItem(shoe: Shoe)
+{
+   itemSho.value=shoe
+}
+fun newitem(): Shoe?
+{
+   return itemSho.value
+}
+
 
 }

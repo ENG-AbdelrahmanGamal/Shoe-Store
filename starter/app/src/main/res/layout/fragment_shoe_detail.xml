@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
-
+       <variable
+           name="viewModel"
+           type="com.udacity.shoestore.uI.ShoesViewModel" />
     </data>
 <!--  I Use the linear to Root the view until support me present the complex Design
 below by vertical  any way the constraint  layout easy for control distinction of the view  use tag constraint

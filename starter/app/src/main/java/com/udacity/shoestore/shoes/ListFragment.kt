@@ -18,6 +18,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentListBinding
+import com.udacity.shoestore.databinding.ItemBinding
 import com.udacity.shoestore.models.AddView
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.uI.ShoesViewModel
@@ -29,33 +30,38 @@ class ListFragment : Fragment() {
     private val TAG = "ListFragment"
     lateinit var linearLayout: LinearLayout
     private lateinit var binding: FragmentListBinding
-    private lateinit var viewModel: ShoesViewModel
+    private  lateinit var viewModel: ShoesViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_list, container, false)
         setHasOptionsMenu(true)
-
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProvider(requireActivity()).get(ShoesViewModel::class.java)
-        binding.model=viewModel
+        binding.viewModel=viewModel
         binding.lifecycleOwner=this
         viewModel._shoe.observe(viewLifecycleOwner) {
              itemShoe ->
                 itemShoe.forEachIndexed { index, shoe ->
-                    val view: View= layoutInflater.inflate(R.layout.item, null)
-                    view.tv_item_name.setText(shoe.name)
-                    view.tv_item_Company.setText(shoe.company)
-                    view.tv_item_size?.setText(shoe.size.toString())
-                    view.tv_item_Description.setText(shoe.description)
+              //      val view: View= layoutInflater.inflate(R.layout.item, null)
+                    val itemBinding=ItemBinding.inflate(layoutInflater)
+                    itemBinding.shoe=shoe
+                    itemBinding.executePendingBindings()
+
+//                    view.tv_item_name.setText(shoe.name)
+//                    view.tv_item_Company.setText(shoe.company)
+//                    view.tv_item_size?.setText(shoe.size.toString())
+//                    view.tv_item_Description.setText(shoe.description)
+                 //   viewModel.getItem(shoe)
+
+
                     linearLayout = binding.linearContainerParent
-                    linearLayout.addView(view)
+                   linearLayout.addView(itemBinding.constraintItemParent)
 
 
                 }
