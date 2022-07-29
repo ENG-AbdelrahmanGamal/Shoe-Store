@@ -34,8 +34,7 @@ class ListFragment : Fragment() {
     private lateinit var binding: FragmentListBinding
     private  lateinit var viewModel: ShoesViewModel
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_list, container, false)
         setHasOptionsMenu(true)
@@ -47,18 +46,12 @@ class ListFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity()).get(ShoesViewModel::class.java)
         binding.viewModel=viewModel
         binding.lifecycleOwner=requireActivity()
-       // binding.lifecycleOwner=viewLifecycleOwner
         viewModel.shoe.observe(viewLifecycleOwner) {
              itemShoe ->
                 itemShoe.forEachIndexed{ index,shoe ->
-               //   val view: View= layoutInflater.inflate(R.layout.item, null)
                     val itemBinding=ItemBinding.inflate(layoutInflater)
                     linearLayout = binding.linearContainerParent
-              // linearLayout.addView(view)
-               //     viewModel.addShoe()
                     itemBinding.shoe=shoe
-                   // viewModel.updateListOfShoe
-               //   shoe.also {  viewModel.updateListOfShoe}
 
                     itemBinding.executePendingBindings()
                     Log.i(TAG, "onViewCreated: observe shoe ${shoe.name}")

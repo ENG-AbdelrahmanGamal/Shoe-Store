@@ -45,15 +45,13 @@ class ShoeDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        viewModel = ViewModelProvider(requireActivity()).get(ShoesViewModel::class.java)
+        binding.viewModel=viewModel
+        binding.lifecycleOwner=viewLifecycleOwner
         binding.buttonSave.setOnClickListener {
          val view: View= layoutInflater.inflate(R.layout.item, null)
-        viewModel = ViewModelProvider(requireActivity()).get(ShoesViewModel::class.java)
-            binding.viewModel=viewModel
-            binding.lifecycleOwner=requireActivity()
               viewModel.addShoe()
             binding.constraint.addView(view)
-
             if(binding.etName.text.isNotEmpty()&&
               binding.etCompany.text.isNotEmpty()&&
                binding.tvNameSize.text.isNotEmpty() &&
@@ -61,7 +59,6 @@ class ShoeDetailFragment : Fragment() {
           )
           {
          Navigation.findNavController(requireView()).navigate(R.id.action_ShoeDetailFragment_to_listFragment)
-
           }
             else{
                 Toast.makeText(requireActivity(),"pleaseFil all the data required ",Toast.LENGTH_LONG)

@@ -30,7 +30,7 @@ class ShoesViewModel : ViewModel() {
   // var itemOfShoe=Shoe("new Style","41","Nile Stock","came this year ")
 
    // val updateListOfShoe=_shoe.value?.also{ it.add(itemOfShoe) }
-    val shoeItemMutableLiveData = MutableLiveData(Shoe("new Style","41","Nile Stock","came this year "))
+    val shoeItemMutableLiveData = MutableLiveData(Shoe("","","",""))
 
     fun addShoe() {
         _shoe.value?.add(shoeItemMutableLiveData.value!!.copy())
