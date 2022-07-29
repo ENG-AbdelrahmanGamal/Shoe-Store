@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.databinding.Bindable
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleObserver
@@ -24,6 +25,7 @@ import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.uI.ShoesViewModel
 import kotlinx.android.synthetic.main.item.view.*
 import org.w3c.dom.Text
+import kotlin.math.log
 
 
 class ListFragment : Fragment() {
@@ -44,25 +46,24 @@ class ListFragment : Fragment() {
 
         viewModel = ViewModelProvider(requireActivity()).get(ShoesViewModel::class.java)
         binding.viewModel=viewModel
-        binding.lifecycleOwner=this
-        viewModel._shoe.observe(viewLifecycleOwner) {
+        binding.lifecycleOwner=requireActivity()
+       // binding.lifecycleOwner=viewLifecycleOwner
+        viewModel.shoe.observe(viewLifecycleOwner) {
              itemShoe ->
-                itemShoe.forEachIndexed { index, shoe ->
-              //      val view: View= layoutInflater.inflate(R.layout.item, null)
+                itemShoe.forEachIndexed{ index,shoe ->
+               //   val view: View= layoutInflater.inflate(R.layout.item, null)
                     val itemBinding=ItemBinding.inflate(layoutInflater)
-                    itemBinding.shoe=shoe
-                    itemBinding.executePendingBindings()
-
-//                    view.tv_item_name.setText(shoe.name)
-//                    view.tv_item_Company.setText(shoe.company)
-//                    view.tv_item_size?.setText(shoe.size.toString())
-//                    view.tv_item_Description.setText(shoe.description)
-                 //   viewModel.getItem(shoe)
-
-
                     linearLayout = binding.linearContainerParent
-                   linearLayout.addView(itemBinding.constraintItemParent)
+              // linearLayout.addView(view)
+               //     viewModel.addShoe()
+                    itemBinding.shoe=shoe
+                   // viewModel.updateListOfShoe
+               //   shoe.also {  viewModel.updateListOfShoe}
 
+                    itemBinding.executePendingBindings()
+                    Log.i(TAG, "onViewCreated: observe shoe ${shoe.name}")
+                    Log.i(TAG, "onViewCreated observe item of shoe: ${viewModel.shoeItemMutableLiveData.value?.name}")
+                    linearLayout.addView(itemBinding.root)
 
                 }
             }

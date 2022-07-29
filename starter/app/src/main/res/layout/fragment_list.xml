@@ -8,6 +8,8 @@
     name="viewModel"
     type="com.udacity.shoestore.uI.ShoesViewModel" />
     </data>
+<!--    Here i recommend using ConstrainLayout to more suitable
+and control for list of item shoes   -->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -20,7 +22,8 @@
         android:layout_height="wrap_content"
         android:background="#6666"
         tools:context=".shoes.ListFragment">
-        <!-- TODO: Update blank fragment layout -->
+        <!-- inside  the scroll i want just any view vertical
+        to display items so cause  to use Linear -->
         <LinearLayout
             android:id="@+id/linear_Container_parent"
             android:orientation="vertical"

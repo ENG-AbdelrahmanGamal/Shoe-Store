@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".uI.WelcomeFragment">
+        <!--  this fragment just have a simple view the LinearLayout very appropriate-->
 
 <LinearLayout
     android:id="@+id/parent_linear"

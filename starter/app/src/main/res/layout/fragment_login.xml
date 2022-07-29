@@ -12,7 +12,14 @@
         android:layout_height="match_parent"
         tools:context=".authentication.LoginFragment">
 
-        <!-- TODO: Update blank fragment layout -->
+        <!-- the layout is more simple just want to display the view as a vertical as parent
+        Also, because I divided the layout into groups like  part of EditText and part of button
+        so one use Linear and other use constraint specific the part of button
+        in order to control the button from 4 dimensions top ,bottom start and end
+
+        -->
+
+
         <LinearLayout
             android:id="@+id/linearLayout_login"
             android:layout_width="match_parent"
@@ -59,6 +66,8 @@
             android:id="@+id/constraint_buttons"
             android:layout_width="match_parent"
             android:layout_height="59dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:layout_marginTop="@dimen/_300sdp">
 
             <Button

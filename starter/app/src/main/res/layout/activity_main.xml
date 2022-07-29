@@ -6,12 +6,16 @@
     <data>
 
     </data>
+<!--
 
+A CoordinatorLayout is a awesome     feature of Material Design that helps to create attractive and harmonized layouts.
+it not the familiar like FrameLayout But he plays the same behaviors
+-->
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".uI.MainActivity">
-
+<!--   here the fragment nissary to use when display a navigation -->
         <fragment
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"

@@ -9,6 +9,12 @@
     type="com.udacity.shoestore.models.Shoe"
     />
     </data>
+    <!--here i use card view because It's great to use especially for displaying an items
+     like this   easy to display your card with  amazing attribute CornerRadius
+     to make your view with curve -->
+
+
+    <!--here i used a constraint to make a image center of parent and view start with the parent -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_marginTop="?actionBarSize"
@@ -17,8 +23,7 @@
         android:padding="@dimen/_5sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-<!--here i use card view because It's great to use especially for displaying an items
- like this   easy to display your card with  amazing attribute CornerRadius to make your view with curve -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
@@ -29,7 +34,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-<!--here i used a constraint to make a image center of parent and view start with the parent -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -52,7 +56,7 @@
                     android:paddingStart="@dimen/_5sdp"
                     android:id="@+id/tv_item_name"
                     android:layout_width="wrap_content"
-                    android:text="@{shoe.name}"
+                    android:text="@={shoe.name}"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="@dimen/_14sdp"
@@ -66,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@{shoe.company}"
+                    android:text="@={shoe.company}"
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
@@ -81,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
-                    android:text="@{Double.toString(shoe.size)}"
+                    android:text="@={shoe.size}"
                     android:textStyle="bold"
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -95,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
-                    android:text="@{shoe.description}"
+                    android:text="@={shoe.description}"
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_item_size"

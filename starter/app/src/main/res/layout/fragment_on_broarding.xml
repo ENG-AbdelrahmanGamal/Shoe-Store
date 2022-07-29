@@ -6,7 +6,7 @@
     <data>
 
     </data>
-
+<!--  this fragment just have a simple view the LinearLayout very appropriate-->
    <LinearLayout
        android:orientation="vertical"
        android:layout_width="match_parent"
